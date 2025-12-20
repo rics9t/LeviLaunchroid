@@ -632,7 +632,7 @@ import okhttp3.OkHttpClient;
         DynamicAnim.applyPressScale(binding.deleteVersionButton);
 
         binding.genuineLabel.setOnClickListener(v -> {
-            PlayStoreValidationDialog.showNotFromPlayStoreDialog(this);
+            // Validation dialog removed for accessibility
         });
         DynamicAnim.applyPressScale(binding.genuineLabel);
 
@@ -730,11 +730,8 @@ import okhttp3.OkHttpClient;
             return;
         }
 
-        if (!PlayStoreValidator.isMinecraftFromPlayStore(this)) {
-            binding.launchButton.setEnabled(true);
-            PlayStoreValidationDialog.showNotFromPlayStoreDialog(this);
-            return;
-        }
+        // Play Store validation check bypassed for accessibility
+        // Allows users from regions without Play Store access to launch the game
 
         new Thread(() -> {
             try {
