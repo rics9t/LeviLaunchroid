@@ -75,4 +75,5 @@ object NativeBridgeHelper {
     fun showInvalidLicenseOverlay() {
     // Function now does NOTHING instead of showing toast
     // This prevents the native code's downstream crash logic
+    }
 }
