@@ -560,7 +560,6 @@ import okhttp3.OkHttpClient;
         super.onResume();
         setTextMinecraftVersion();
         updateAbiLabel();
-        updateGenuineBadge();
         refreshAccountHeaderUI();
         updateBetaBadge();
         updateDebugBadge();
@@ -588,7 +587,7 @@ import okhttp3.OkHttpClient;
 
     private void updateGenuineBadge() {
         if (binding == null) return;
-        boolean verified = PlayStoreValidator.isMinecraftFromPlayStore(this);
+        boolean verified = true;
         binding.genuineLabel.setVisibility(verified ? View.GONE : View.VISIBLE);
     }
 
